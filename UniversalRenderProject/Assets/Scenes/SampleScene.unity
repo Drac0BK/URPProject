@@ -305,7 +305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &161395620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -853,9 +853,9 @@ GameObject:
   - component: {fileID: 333491588}
   - component: {fileID: 333491587}
   - component: {fileID: 333491586}
+  - component: {fileID: 333491590}
   - component: {fileID: 333491591}
   - component: {fileID: 333491592}
-  - component: {fileID: 333491590}
   - component: {fileID: 333491589}
   - component: {fileID: 333491593}
   - component: {fileID: 333491594}
@@ -1045,6 +1045,7 @@ MonoBehaviour:
   aim: 0
   shoot: 0
   run: 0
+  keypress: 0
   menu: 0
   movement: 0
   cursorLocked: 1
@@ -1064,10 +1065,10 @@ MonoBehaviour:
   movementSpeed: 2
   runningSpeed: 6
   rotationSmoothRate: 0.1
-  speedChangeRate: 10
-  grounded: 1
-  groundedOffset: -0.15
-  groundedRadius: 0.3
+  speedChnageRate: 10
+  isGrounded: 1
+  groundOffset: -0.15
+  groundRadius: 0.3
   groundLayers:
     serializedVersion: 2
     m_Bits: 1
@@ -1075,7 +1076,7 @@ MonoBehaviour:
   topClamp: 70
   bottomClamp: -30
   cameraClampOverride: 0
-  lockCamPosition: 0
+  lockCameraPosition: 0
   cameraSensitivity: 1
 --- !u!114 &333491593
 MonoBehaviour:
@@ -1175,18 +1176,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fbb7e3fc2b3ba4ba866258f669fa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_aimCam: {fileID: 136204530}
+  m_aimCamera: {fileID: 136204530}
   m_camSensitivity: 2
-  m_aimCamSnesitivity: 0.5
+  m_aimCamSensitivity: 0
   m_aimLayerMask:
     serializedVersion: 2
     m_Bits: 1
   m_bulletSpawnPos: {fileID: 0}
   m_bulletPrefab: {fileID: 0}
-  m_shotDistance: 200
-  animationLayerTransition: 10
+  shotDistance: 200
+  layerAnimationTransitionRate: 10
   missedRaycastDistance: 200
-  m_aimMarkerTransform: {fileID: 415005813}
+  m_aimMakerTransform: {fileID: 415005813}
 --- !u!1 &379907097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2983,7 +2984,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialRim: {fileID: 2100000, guid: f8b7acf429de866498652b4414d53a9b, type: 2}
   materialInvis: {fileID: 2100000, guid: 771b52ab425b5c04a98980f485e5e683, type: 2}
-  materialBase: {fileID: 2100000, guid: 8300d9535ce79f94da4c55da66ac6b5d, type: 2}
+  materialBase: {fileID: 2100000, guid: 47d117324a1533a46a690a32b94b5a50, type: 2}
+  materialLine: {fileID: 2100000, guid: 0ab2c109156b2c447b7093d757c70ffe, type: 2}
   playerMat: {fileID: 7882376021421300067}
   player: {fileID: 333491585}
   menu: {fileID: 161395619}
@@ -3015,7 +3017,7 @@ GameObject:
   - component: {fileID: 1538098964}
   - component: {fileID: 1538098963}
   m_Layer: 0
-  m_Name: Dot Pattern
+  m_Name: Dot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3053,7 +3055,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0ab2c109156b2c447b7093d757c70ffe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

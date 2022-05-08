@@ -10,6 +10,8 @@ public class ChangeMaterial : MonoBehaviour
     public Material materialRim;
     public Material materialInvis;
     public Material materialBase;
+    public Material materialLine;
+
     public GameObject playerMat;
     public GameObject player;
     public GameObject menu;
@@ -27,17 +29,20 @@ public class ChangeMaterial : MonoBehaviour
         {
             menu.SetActive(true);
             player.GetComponent<InputManagerTPS>().cursorLocked = false;
+            player.GetComponent<InputManagerTPS>().cursorInputLook = true;
             Cursor.lockState = CursorLockMode.None;
         }
 
 
-        if (materialNum == 2) playerMat.gameObject.GetComponent<Renderer>().material = materialRim;
+        if (materialNum == 3) playerMat.gameObject.GetComponent<Renderer>().material = materialRim;
+
+        if (materialNum == 2) playerMat.gameObject.GetComponent<Renderer>().material = materialLine;
 
         if (materialNum == 1) playerMat.gameObject.GetComponent<Renderer>().material = materialInvis;
 
         if (materialNum == 0) playerMat.gameObject.GetComponent<Renderer>().material = materialBase;
 
-        if (materialNum == 3) materialNum = 0;
+        if (materialNum == 4) materialNum = 0;
 
     }
 
@@ -48,6 +53,7 @@ public class ChangeMaterial : MonoBehaviour
     public void turnOn()
     {
         player.GetComponent<InputManagerTPS>().cursorLocked = true;
+        player.GetComponent<InputManagerTPS>().cursorInputLook = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 

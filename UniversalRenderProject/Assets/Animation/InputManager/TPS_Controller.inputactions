@@ -17,7 +17,7 @@
                     "name": "Look",
                     "type": "Value",
                     "id": "73c8fab4-c8bf-4678-a4d9-876e90ba831c",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 },
@@ -25,7 +25,7 @@
                     "name": "Run",
                     "type": "PassThrough",
                     "id": "a357d7d1-542a-483b-b35c-8567e1f596ee",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
                 },
@@ -55,9 +55,9 @@
                 },
                 {
                     "name": "Aim",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "f65a80a8-dda9-4336-b20f-adfd6fc20a71",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
                 },

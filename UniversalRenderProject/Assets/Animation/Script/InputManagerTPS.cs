@@ -12,6 +12,7 @@ public class InputManagerTPS : MonoBehaviour
     public bool aim;
     public bool shoot;
     public bool run;
+    public bool keypress;
     public bool menu = false;
 
     public bool movement;
@@ -33,9 +34,9 @@ public class InputManagerTPS : MonoBehaviour
 
     }
 
-    public void LookInput(Vector2 a_moveDir)
+    public void LookInput(Vector2 a_lookDirection)
     {
-        look = a_moveDir;
+        look = a_lookDirection;
 
     }
 
@@ -61,46 +62,50 @@ public class InputManagerTPS : MonoBehaviour
         movement = a_moveState;
     }
 
+    public void KeyboardInput(bool a_keypress)
+    {
+        keypress = a_keypress;
+    }
+
     #endregion
 
     ////////////////////////////////////////////////////////////////////////
 
     #region Functions created for connecting to unity input system
-
     public void OnMove(InputValue a_value)
     {
         MoveInput(a_value.Get<Vector2>());
     }
+
     public void OnLook(InputValue a_value)
     {
-        if(cursorLocked)
-        LookInput(a_value.Get<Vector2>());
+        if (cursorLocked)
+            LookInput(a_value.Get<Vector2>());
     }
 
-    public void onAim(InputValue a_value)
+    public void OnAim(InputValue a_value)
     {
         AimInput(a_value.isPressed);
     }
-    public void onJump(InputValue a_value)
+    public void OnJump(InputValue a_value)
     {
         JumpInput(a_value.isPressed);
     }
-    public void onShoot(InputValue a_value)
-    {
-        ShootInput(a_value.isPressed);
-    }
-    public void onRun(InputValue a_value)
+    public void OnRun(InputValue a_value)
     {
         RunInput(a_value.isPressed);
     }
-    public void onMovement(InputValue a_value)
+    public void OnShoot(InputValue a_value)
     {
-        MovementInput(a_value.isPressed);
+        ShootInput(a_value.isPressed);
     }
-
     public void onMenu(InputValue a_value)
     {
         MenuInput(a_value.isPressed);
+    }
+    public void OnPress(InputValue a_value)
+    {
+        KeyboardInput(a_value.isPressed);
     }
 
     #endregion
@@ -108,12 +113,10 @@ public class InputManagerTPS : MonoBehaviour
     private void OnApplicationFocus(bool focus)
     {
         SetCursorState(cursorLocked);
-
     }
 
-    private void SetCursorState (bool a_state)
+    private void SetCursorState(bool a_static)
     {
-        Cursor.lockState = a_state ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.lockState = a_static ? CursorLockMode.Locked : CursorLockMode.None;
     }
-
 }

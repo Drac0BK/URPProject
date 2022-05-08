@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Invisible
-  m_Shader: {fileID: -6465566751694194690, guid: ace55146981b0bf40b830f9c9655076a, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 5a42754a4d0b0134cb8245ebe09eb23c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -45,6 +45,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - RimPowerRef: 3
+    - TimerRef: 0.55
     m_Colors:
     - ColorRef: {r: 0, g: 0, b: 0, a: 0}
     - NormalMapTilingRef: {r: 1, g: 1, b: 0, a: 0}
