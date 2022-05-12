@@ -305,7 +305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &161395620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -66, y: -164}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &164477648
@@ -746,7 +746,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 226835436}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1422521987}
+        m_TargetAssemblyTypeName: ChangeMaterial, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &226835436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,7 +1086,7 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   look: {x: 0, y: 0}
   jump: 0
-  aim: 1
+  aim: 0
   shoot: 0
   run: 0
   keypress: 0
@@ -1802,8 +1814,8 @@ MonoBehaviour:
   m_MiddleClickAction: {fileID: -7604219664660679068, guid: aa1beea48300c7d48a5c661e0fce295d, type: 3}
   m_RightClickAction: {fileID: 3094536384136746853, guid: aa1beea48300c7d48a5c661e0fce295d, type: 3}
   m_ScrollWheelAction: {fileID: -1549401030270101772, guid: aa1beea48300c7d48a5c661e0fce295d, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 0}
-  m_TrackedDeviceOrientationAction: {fileID: 0}
+  m_TrackedDevicePositionAction: {fileID: 5477143016145931346, guid: aa1beea48300c7d48a5c661e0fce295d, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: -5683887792941582991, guid: aa1beea48300c7d48a5c661e0fce295d, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
 --- !u!114 &708556761
@@ -3996,7 +4008,7 @@ GameObject:
   - component: {fileID: 1944206652}
   - component: {fileID: 1944206651}
   m_Layer: 5
-  m_Name: Fire
+  m_Name: Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

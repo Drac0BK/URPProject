@@ -25,12 +25,13 @@ public class ChangeMaterial : MonoBehaviour
 
     void Update()
     {
-        if(Keyboard.current.qKey.wasPressedThisFrame)
+        if(Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             menu.SetActive(true);
             player.GetComponent<InputManagerTPS>().cursorLocked = false;
             player.GetComponent<InputManagerTPS>().cursorInputLook = true;
             Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
         }
 
 
@@ -52,6 +53,7 @@ public class ChangeMaterial : MonoBehaviour
     }
     public void turnOn()
     {
+        Time.timeScale = 1;
         player.GetComponent<InputManagerTPS>().cursorLocked = true;
         player.GetComponent<InputManagerTPS>().cursorInputLook = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -69,5 +71,10 @@ public class ChangeMaterial : MonoBehaviour
             m_fire.Play();
             return;
         }
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
