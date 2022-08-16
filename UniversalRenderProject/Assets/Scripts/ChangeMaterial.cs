@@ -20,11 +20,12 @@ public class ChangeMaterial : MonoBehaviour
 
     private void Start()
     {
-        
+        playerMat.gameObject.GetComponent<Renderer>().material = materialBase;
     }
 
     void Update()
     {
+        //turn on menu
         if(Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             menu.SetActive(true);
@@ -33,8 +34,6 @@ public class ChangeMaterial : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
         }
-
-
         if (materialNum == 3) playerMat.gameObject.GetComponent<Renderer>().material = materialRim;
 
         if (materialNum == 2) playerMat.gameObject.GetComponent<Renderer>().material = materialLine;
@@ -47,28 +46,32 @@ public class ChangeMaterial : MonoBehaviour
 
     }
 
-    public void addNum()
+    public void ChangeMat()
     {
+        //change the material based on num and resets
         materialNum++;
+
     }
-    public void turnOn()
+    public void TurnOff()
     {
+        //turn off the menu
         Time.timeScale = 1;
         player.GetComponent<InputManagerTPS>().cursorLocked = true;
         player.GetComponent<InputManagerTPS>().cursorInputLook = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    public void flameOn()
+    public void FlameOn()
     {
-        if (m_fire.isEmitting)
+        //Turn the particle flame off or on
+        if (m_fire.gameObject.activeSelf)
         {
-            m_fire.Stop();
+            m_fire.gameObject.SetActive(false);
             return;
         }
-        if (!m_fire.isEmitting)
+        if (!m_fire.gameObject.activeSelf)
         {
-            m_fire.Play();
+            m_fire.gameObject.SetActive(true);
             return;
         }
     }

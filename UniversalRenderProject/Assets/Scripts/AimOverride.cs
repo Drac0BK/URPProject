@@ -60,14 +60,17 @@ public class AimOverride : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Gets the movement based on the input
         Vector2 movement = m_inputs.move.normalized;
         m_currentAnimationVec = Vector2.SmoothDamp(m_currentAnimationVec, movement, ref m_animationDirection, 0.1f, 1.0f);
 
+        //Set the animation accordingly
         m_animator.SetBool("IsStillADS", movement == Vector2.zero ? true : false);
         m_animator.SetBool("IsMotionADS", m_inputs.aim);
         m_animator.SetFloat("ForwardMotion", m_currentAnimationVec.y);
         m_animator.SetFloat("RightMotion", m_currentAnimationVec.x);
 
+        //Point based on icon on screen
         Vector3 mouseWorldPos;
         Vector2 screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
         Ray ray = Camera.main.ScreenPointToRay(screenCenter);
@@ -82,6 +85,7 @@ public class AimOverride : MonoBehaviour
 
         if (m_inputs.aim)
         {
+            //change the camera based on aiming set
             m_aimCamera.gameObject.SetActive(true);
             m_controller.SetCamSensitivity(m_aimCamSensitivity);
             m_controller.SetRotateOnMove(false);
@@ -95,6 +99,7 @@ public class AimOverride : MonoBehaviour
         }
         else
         {
+            //change the camera
             m_aimCamera.gameObject.SetActive(false);
             m_controller.SetCamSensitivity(m_camSensitivity);
             m_controller.SetRotateOnMove(true);

@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 11389646}
   - component: {fileID: 11389645}
   - component: {fileID: 11389644}
-  - component: {fileID: 11389643}
   m_Layer: 0
   m_Name: Rim LIghting
   m_TagString: Untagged
@@ -142,19 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &11389643
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11389642}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &11389644
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -305,7 +291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &161395620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3061,7 +3047,6 @@ GameObject:
   - component: {fileID: 1538098966}
   - component: {fileID: 1538098965}
   - component: {fileID: 1538098964}
-  - component: {fileID: 1538098963}
   m_Layer: 0
   m_Name: Dot
   m_TagString: Untagged
@@ -3069,19 +3054,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1538098963
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538098962}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1538098964
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3603,7 +3575,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1422521987}
         m_TargetAssemblyTypeName: ChangeMaterial, Assembly-CSharp
-        m_MethodName: turnOn
+        m_MethodName: TurnOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3813,7 +3785,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1422521987}
         m_TargetAssemblyTypeName: ChangeMaterial, Assembly-CSharp
-        m_MethodName: addNum
+        m_MethodName: ChangeMat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4080,7 +4052,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1422521987}
         m_TargetAssemblyTypeName: ChangeMaterial, Assembly-CSharp
-        m_MethodName: flameOn
+        m_MethodName: FlameOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4258,7 +4230,6 @@ GameObject:
   - component: {fileID: 2022862749}
   - component: {fileID: 2022862748}
   - component: {fileID: 2022862747}
-  - component: {fileID: 2022862746}
   m_Layer: 0
   m_Name: Invisble
   m_TagString: Untagged
@@ -4266,19 +4237,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &2022862746
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022862745}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2022862747
 MeshRenderer:
   m_ObjectHideFlags: 0
